@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "906459334550",
+    "project_id": "damask-kebab-cc6f0",
+    "storage_bucket": "damask-kebab-cc6f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906459334550:android:db1a1fb84f6b4245c83fb7",
+        "android_client_info": {
+          "package_name": "com.example.damaskkebab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906459334550-u8u45mac3vtbmrelhmlvu1k6t0i648r8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.damaskkebab",
+            "certificate_hash": "65a4545bfe0c0c2a2ed2897901766abdab45597b"
+          }
+        },
+        {
+          "client_id": "906459334550-rtvbmt6j9gucub8g7q7a5ni7vbud9bkc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDcrGK0avVbpAg-K_1tCu19Y4iuJi8V5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906459334550-rtvbmt6j9gucub8g7q7a5ni7vbud9bkc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
