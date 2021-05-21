@@ -37,8 +37,16 @@
     <string name="forgot_password_title_description">Enter your username and e-mail address we\'ll send you an email to reset your password</string>
     <string name="btn_lbl_submit">Submit</string>
 
+    <string name="msg_profile_update_success">Your profile is updated successfully.</string>
+
     <string name="email_sent_success">\"Email sent successfully to reset your password! \"</string>
     <string name="register_success">You are registered successfully.</string>
+<!--    <string name="title_activity_dashboard">MainActivity</string>-->
+    <string name="title_menu">Menu</string>
+    <string name="title_cart">Cart</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="pleas_click_back_again_to_exit">Please click back again to exit.</string>
 
 
 </resources>

@@ -1,12 +1,7 @@
-package com.example.damaskkebab.activities
+package com.example.damaskkebab.ui.activities
 
-import android.content.Intent
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.WindowInsets
-import android.view.WindowManager
 import android.widget.Toast
 import com.example.damaskkebab.R
 import com.example.damaskkebab.firestore.FirestoreClass

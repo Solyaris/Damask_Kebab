@@ -1,4 +1,4 @@
-package com.example.damaskkebab.activities
+package com.example.damaskkebab.ui.activities
 
 import android.content.Intent
 import android.os.Build
@@ -117,7 +117,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         Log.i("Email: ", user.email)
 
         // Redirect the user to Main Screen after log in.
-        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        startActivity(Intent(this@LoginActivity, DashboardActivity::class.java))
         finish()
     }
 

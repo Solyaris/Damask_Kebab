@@ -1,15 +1,18 @@
-package com.example.damaskkebab.activities
+package com.example.damaskkebab.ui.activities
 
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
+import android.os.Handler
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import com.example.damaskkebab.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.dialog_progress.*
 
 open class BaseActivity : AppCompatActivity() {
+
+    private var doubleBackToExitPressedOnce = false
 
     private lateinit var mProgressDialog: Dialog
 
@@ -40,7 +43,8 @@ open class BaseActivity : AppCompatActivity() {
         }
         snackBar.show()
     }
-    fun showProgressDialog(text: String){
+
+    fun showProgressDialog(text: String) {
         mProgressDialog = Dialog(this)
 
         /*Set the screen content from a layout resource.
@@ -55,7 +59,27 @@ open class BaseActivity : AppCompatActivity() {
         //Start the dialog and display it on screen
         mProgressDialog.show()
     }
+
     fun hideProgressDialog() {
         mProgressDialog.dismiss()
+    }
+
+    fun doubleBackToExit() {
+
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed()
+            return
+        }
+
+        this.doubleBackToExitPressedOnce = true
+
+        Toast.makeText(
+            this,
+            resources.getString(R.string.pleas_click_back_again_to_exit),
+            Toast.LENGTH_SHORT
+        ).show()
+
+        @Suppress("DEPRECATION")
+        Handler().postDelayed({ doubleBackToExitPressedOnce = false }, 2000)
     }
 }

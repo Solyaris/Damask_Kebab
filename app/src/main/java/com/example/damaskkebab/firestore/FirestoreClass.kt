@@ -4,8 +4,8 @@ import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import com.example.damaskkebab.activities.LoginActivity
-import com.example.damaskkebab.activities.RegisterActivity
+import com.example.damaskkebab.ui.activities.LoginActivity
+import com.example.damaskkebab.ui.activities.RegisterActivity
 import com.example.damaskkebab.models.User
 import com.example.damaskkebab.utils.Constants
 import com.google.firebase.auth.FirebaseAuth

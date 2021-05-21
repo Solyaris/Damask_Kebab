@@ -1,4 +1,4 @@
-package com.example.damaskkebab.activities
+package com.example.damaskkebab.ui.activities
 
 import android.content.Intent
 import android.os.Build
@@ -28,7 +28,7 @@ class SplashActivity : AppCompatActivity() {
         @Suppress("DEPRECATION")
         Handler().postDelayed(
             {
-                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+                startActivity(Intent(this@SplashActivity, DashboardActivity::class.java))
                 finish()
             },
             1500
