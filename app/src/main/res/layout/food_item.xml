@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorWhite"
+    app:cardCornerRadius="@dimen/button_background_radius"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:layout_goneMarginEnd="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/food_image"
+            android:layout_width="@dimen/product_card_image_height"
+            android:layout_height="@dimen/product_card_image_height" />
+
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_title"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/food__price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/product_description"
+            android:textSize="12sp"
+            android:textAppearance="?attr/textAppearanceBody2"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

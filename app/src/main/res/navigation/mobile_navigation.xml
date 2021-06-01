@@ -9,7 +9,12 @@
         android:id="@+id/navigation_menu"
         android:name="com.example.damaskkebab.ui.fragments.MenuFragment"
         android:label="@string/title_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_navigation_menu_to_foodListFragment"
+            app:destination="@id/navigation_foodList" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_cart"
@@ -22,4 +27,13 @@
         android:name="com.example.damaskkebab.ui.fragments.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_foodList"
+        android:name="com.example.damaskkebab.ui.fragments.FoodListFragment"
+        android:label="fragment_food_list"
+        tools:layout="@layout/fragment_food_list">
+        <argument
+            android:name="categoryId"
+            app:argType="string" />
+    </fragment>
 </navigation>
