@@ -8,8 +8,10 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/food_recycler_view"
-        android:padding="16dp"
+        android:paddingStart="@dimen/product_grid_spacing"
+        android:paddingEnd="@dimen/product_grid_spacing"
         android:layout_width="match_parent"
+
         android:clipToPadding="false"
         android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

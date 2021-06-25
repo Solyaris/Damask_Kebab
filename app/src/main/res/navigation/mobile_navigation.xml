@@ -9,7 +9,7 @@
         android:id="@+id/navigation_menu"
         android:name="com.example.damaskkebab.ui.fragments.MenuFragment"
         android:label="@string/title_menu"
-        tools:layout="@layout/fragment_menu" >
+        tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_navigation_menu_to_foodListFragment"
             app:destination="@id/navigation_foodList" />
@@ -34,6 +34,22 @@
         tools:layout="@layout/fragment_food_list">
         <argument
             android:name="categoryId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_navigation_foodList_pop_including_navigation_menu2"
+            app:popUpTo="@id/navigation_menu"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navigation_foodList_to_foodDetailFragment"
+            app:destination="@id/foodDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodDetailFragment"
+        android:name="com.example.damaskkebab.ui.fragments.FoodDetailFragment"
+        android:label="fragment_food_detail"
+        tools:layout="@layout/fragment_food_detail">
+        <argument
+            android:name="foodId"
             app:argType="string" />
     </fragment>
 </navigation>
