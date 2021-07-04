@@ -19,7 +19,7 @@ interface FoodDatabaseDao {
     suspend fun get(key: Long): Food?
 
     @Query("select * from food_table order by foodId DESC")
-    fun getAllFood(): List<Food>
+    fun getAllFood(): LiveData<List<Food>>
 
 //    fun getAllFood(): LiveData<List<Food>>
 }

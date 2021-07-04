@@ -59,7 +59,7 @@ class FoodListFragment : Fragment() {
     private fun loadListFood(categoryId: String) {
         adapter = object : FirebaseRecyclerAdapter<Food, FoodViewHolder>(
             Food::class.java,
-            R.layout.food_item,
+            R.layout.item_food,
             FoodViewHolder::class.java,
             foodList!!.orderByChild("MenuId").equalTo(categoryId)
         ) {

@@ -34,7 +34,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/food__price"
+                android:id="@+id/food_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/product_description"

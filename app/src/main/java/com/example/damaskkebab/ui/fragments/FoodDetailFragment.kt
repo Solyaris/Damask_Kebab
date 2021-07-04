@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.lifecycleScope
 import com.example.damaskkebab.R
 import com.example.damaskkebab.database.FoodDatabase
 import com.example.damaskkebab.models.Food
@@ -20,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_food_detail.food_name
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.lang.NullPointerException
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -57,13 +57,17 @@ class FoodDetailFragment : Fragment() {
 
         val application = requireNotNull(this.activity).application
         val foodDao = FoodDatabase.getInstance(application).foodDatabaseDao
-                val scope = CoroutineScope(Dispatchers.Default)
+        val scope = CoroutineScope(Dispatchers.Default)
 
         val buttonCart = root.findViewById<View>(R.id.btnCart) as FloatingActionButton
         buttonCart.setOnClickListener {
             scope.launch {
-                currentFood?.let { it1 -> foodDao.insert(it1) }
-                Log.d(TAG, "onCreateView: ${foodDao.getAllFood()}")
+                try {
+                    foodDao.get(currentFood!!.foodId)!!.Quantity++
+                } catch (e: NullPointerException) {
+                    currentFood?.let { it1 -> foodDao.insert(it1) }
+                }
+
             }
         }
 

@@ -15,8 +15,11 @@ data class Food(
     val Description: String,
     @ColumnInfo(name = "price")
     val Price: String,
+    @ColumnInfo(name="count")
+    var Quantity: Long,
     @PrimaryKey
-    var foodId: Long = 0L
-) {
-    constructor() : this("", "", "", "", "")
+    var foodId: Long = 0L,
+
+    ) {
+    constructor() : this("", "", "", "", "", 1)
 }

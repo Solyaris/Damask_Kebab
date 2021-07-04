@@ -48,7 +48,7 @@ class MenuFragment : Fragment() {
     private fun loadMenu() {
         adapter = object : FirebaseRecyclerAdapter<Category, CategoryViewHolder>(
             Category::class.java,
-            R.layout.category_item,
+            R.layout.item_category,
             CategoryViewHolder::class.java,
             categories
         ) {

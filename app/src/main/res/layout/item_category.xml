@@ -6,7 +6,7 @@
     app:cardBackgroundColor="@color/colorWhite"
     app:cardCornerRadius="@dimen/button_background_radius"
     android:layout_margin="16dp"
-    app:cardElevation="2dp"
+    app:cardElevation="3dp"
     app:cardPreventCornerOverlap="true">
 
     <LinearLayout

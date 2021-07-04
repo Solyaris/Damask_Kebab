@@ -6,14 +6,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.damaskkebab.R
 import com.example.damaskkebab.ui.`interface`.ItemClickListener
-import kotlinx.android.synthetic.main.food_item.view.*
 
 class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     View.OnClickListener {
 
     var foodImage: ImageView = itemView.findViewById(R.id.food_image)
     var foodName: TextView = itemView.findViewById(R.id.food_name)
-    var foodPrice: TextView = itemView.findViewById(R.id.food__price)
+    var foodPrice: TextView = itemView.findViewById(R.id.food_price)
 
     private var itemClickListener: ItemClickListener? = null
 

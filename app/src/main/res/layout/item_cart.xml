@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/card_background"
+    android:elevation="3dp">
+
+
+    <com.example.damaskkebab.utils.DKTextView
+        android:id="@+id/cart_item_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/currency2"
+        app:layout_constraintEnd_toStartOf="@+id/currency2"
+        app:layout_constraintTop_toTopOf="@+id/currency2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.example.damaskkebab.utils.DKTextView
+        android:id="@+id/currency2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ruble"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_plus"
+        app:layout_constraintEnd_toEndOf="@id/currency"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_plus" />
+
+    <ImageView
+        android:id="@+id/cart_item_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/pizza1" />
+
+    <com.example.damaskkebab.utils.DKTextView
+        android:id="@+id/cart_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Шаверма в пите"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/cart_item_price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/cart_item_image"
+        app:layout_constraintTop_toTopOf="@id/cart_item_image" />
+
+
+    <com.example.damaskkebab.utils.DKTextView
+        android:id="@+id/cart_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/currency"
+        app:layout_constraintEnd_toStartOf="@+id/currency"
+        app:layout_constraintTop_toTopOf="@+id/currency" />
+
+    <com.example.damaskkebab.utils.DKTextView
+        android:id="@+id/currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:text="@string/ruble"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cart_item_name" />
+
+    <ImageView
+        android:id="@+id/cart_item_minus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_image"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_image"
+        app:srcCompat="@drawable/minus" />
+
+    <TextView
+        android:id="@+id/cart_item_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@id/cart_item_minus"
+        app:layout_constraintStart_toEndOf="@id/cart_item_minus"
+        app:layout_constraintTop_toTopOf="@id/cart_item_minus" />
+
+    <ImageView
+        android:id="@+id/cart_item_plus"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cart_item_minus"
+        app:layout_constraintStart_toEndOf="@+id/cart_item_quantity"
+        app:layout_constraintTop_toTopOf="@id/cart_item_minus"
+        app:srcCompat="@drawable/plus" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

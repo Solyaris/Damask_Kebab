@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.damaskkebab.models.Food
 
-@Database(entities = [Food::class], version = 1, exportSchema = false)
+@Database(entities = [Food::class], version = 3, exportSchema = false)
 abstract class FoodDatabase() : RoomDatabase() {
 
     abstract val foodDatabaseDao: FoodDatabaseDao
@@ -27,6 +27,7 @@ abstract class FoodDatabase() : RoomDatabase() {
                         "food_database"
                     )
                         .fallbackToDestructiveMigration()
+                        .allowMainThreadQueries()
                         .build()
 
                     INSTANCE = instance
