@@ -147,6 +147,7 @@
     <string name="delivery_services">Delivery Services:</string>
     <string name="total">Total:</string>
     <string name="check_out">Check Out</string>
+    <string name="add_to_cart">Add to Cart</string>
 
 
 </resources>

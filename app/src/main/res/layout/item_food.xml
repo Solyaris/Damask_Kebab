@@ -1,48 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/colorWhite"
-    app:cardCornerRadius="@dimen/button_background_radius"
-    app:cardElevation="2dp"
-    app:cardPreventCornerOverlap="true">
+    android:layout_width="205dp"
+    android:layout_height="260dp"
+    android:elevation="3dp"
+    android:background="@drawable/card_background">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <com.example.damaskkebab.utils.DKTextView
+        android:id="@+id/food_item_title"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:text="Шаверма с тем, с этим\nеще и с этим"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/food_image" />
 
-        <ImageView
-            android:id="@+id/food_image"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/product_card_image_height"
-            android:scaleType="centerCrop" />
-
-        <LinearLayout
-            android:padding="16dp"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/food_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/product_title"
-                android:textAppearance="?attr/textAppearanceHeadline6"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/food_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/product_description"
-                android:textAppearance="?attr/textAppearanceBody2"
-                android:textSize="14sp" />
-        </LinearLayout>
+    <ImageView
+        android:id="@+id/food_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:src="@drawable/pizza1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-    </LinearLayout>
+<!--    <com.example.damaskkebab.utils.DKTextViewBold-->
+<!--        android:id="@+id/food_price"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="ruble"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_marginBottom="4dp"-->
+<!--        android:layout_marginStart="16dp"-->
+<!--        android:layout_marginEnd="16dp"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textAppearance="?attr/textAppearanceBody2"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/food_image" />-->
 
-</com.google.android.material.card.MaterialCardView>
+<!--    <com.example.damaskkebab.utils.DKTextViewBold-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/ruble"-->
+<!--        android:textColor="@color/colorPrimary"-->
+<!--        android:textSize="14sp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/food_price"-->
+<!--        app:layout_constraintStart_toEndOf="@id/food_price"-->
+<!--        app:layout_constraintTop_toTopOf="@id/food_price" />-->
+
+    <TextView
+        android:id="@+id/food_item_add_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/button_background"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="3dp"
+        android:text="+ 0"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

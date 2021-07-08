@@ -11,15 +11,12 @@ import com.example.damaskkebab.R
 import com.example.damaskkebab.database.FoodDatabase
 import com.example.damaskkebab.models.Food
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.*
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_food_detail.*
-import kotlinx.android.synthetic.main.fragment_food_detail.food_name
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.lang.NullPointerException
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -59,7 +56,7 @@ class FoodDetailFragment : Fragment() {
         val foodDao = FoodDatabase.getInstance(application).foodDatabaseDao
         val scope = CoroutineScope(Dispatchers.Default)
 
-        val buttonCart = root.findViewById<View>(R.id.btnCart) as FloatingActionButton
+        val buttonCart = root.findViewById<View>(R.id.detail_add_to_cart_btn)
         buttonCart.setOnClickListener {
             scope.launch {
                 try {
@@ -81,11 +78,11 @@ class FoodDetailFragment : Fragment() {
                 currentFood = snapshot.getValue(Food::class.java)
                 currentFood!!.foodId = foodId.toLong()
                 Picasso.with(context).load(currentFood?.Image)
-                    .into(img_food)
+                    .into(detail_image)
                 collapsingToolbarLayout?.title = currentFood?.Name
-                food_price.text = currentFood?.Price
-                food_name.text = currentFood?.Name
-                food_description.text = currentFood?.Description
+                detail_price.text = currentFood?.Price
+                detail_title.text = currentFood?.Name
+                detail_description.text = currentFood?.Description
             }
 
             override fun onCancelled(error: DatabaseError) {}

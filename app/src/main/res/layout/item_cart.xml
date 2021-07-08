@@ -9,7 +9,8 @@
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="10dp"
     android:background="@drawable/card_background"
-    android:elevation="3dp">
+    android:elevation="3dp"
+    tools:targetApi="lollipop">
 
 
     <com.example.damaskkebab.utils.DKTextView
@@ -30,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/ruble"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ff5e00"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/cart_item_plus"
         app:layout_constraintEnd_toEndOf="@id/currency"
@@ -83,7 +84,7 @@
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:text="@string/ruble"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#ff5e00"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/cart_item_name"
         app:layout_constraintEnd_toEndOf="parent"

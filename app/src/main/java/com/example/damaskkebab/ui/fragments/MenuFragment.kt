@@ -13,6 +13,7 @@ import com.example.damaskkebab.R
 import com.example.damaskkebab.models.Category
 import com.example.damaskkebab.ui.`interface`.ItemClickListener
 import com.example.damaskkebab.ui.viewholder.CategoryViewHolder
+import com.example.damaskkebab.utils.ProductGridItemDecoration
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -40,6 +41,11 @@ class MenuFragment : Fragment() {
         recyclerMenu = root.findViewById<View>(R.id.category_recycler_view) as RecyclerView
         recyclerMenu!!.setHasFixedSize(true)
         recyclerMenu!!.layoutManager = LinearLayoutManager(context)
+
+        val largePadding = resources.getDimensionPixelSize(R.dimen.product_grid_spacing_large)
+        val smallPadding = resources.getDimensionPixelSize(R.dimen.product_grid_spacing_small)
+        recyclerMenu!!.addItemDecoration(ProductGridItemDecoration(largePadding, smallPadding))
+
 
         loadMenu()
         return root

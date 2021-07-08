@@ -44,6 +44,7 @@ class FoodListFragment : Fragment() {
         recyclerView = root.findViewById<View>(R.id.food_recycler_view) as RecyclerView
         recyclerView!!.setHasFixedSize(true)
         recyclerView!!.layoutManager = GridLayoutManager(context, 2, RecyclerView.VERTICAL, false)
+
         val largePadding = resources.getDimensionPixelSize(R.dimen.product_grid_spacing_large)
         val smallPadding = resources.getDimensionPixelSize(R.dimen.product_grid_spacing_small)
         recyclerView!!.addItemDecoration(ProductGridItemDecoration(largePadding, smallPadding))
@@ -69,7 +70,8 @@ class FoodListFragment : Fragment() {
                 i: Int
             ) {
                 foodViewHolder.foodName.text = model.Name
-                foodViewHolder.foodPrice.text = model.Price
+                foodViewHolder.foodPrice.text =  "+ " + model.Price + " " +context!!.getString(R.string.ruble)
+//                foodViewHolder.foodPrice.text = "+ " + model.Price + " " + R.string.ruble.toString()
                 Picasso.with(context).load(model.Image)
                     .into(foodViewHolder.foodImage)
                 foodViewHolder.setItemClickListener(object : ItemClickListener {

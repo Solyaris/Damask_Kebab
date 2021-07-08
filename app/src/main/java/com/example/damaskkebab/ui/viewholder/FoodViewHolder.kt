@@ -11,8 +11,8 @@ class FoodViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
     View.OnClickListener {
 
     var foodImage: ImageView = itemView.findViewById(R.id.food_image)
-    var foodName: TextView = itemView.findViewById(R.id.food_name)
-    var foodPrice: TextView = itemView.findViewById(R.id.food_price)
+    var foodName: TextView = itemView.findViewById(R.id.food_item_title)
+    var foodPrice: TextView = itemView.findViewById(R.id.food_item_add_tv)
 
     private var itemClickListener: ItemClickListener? = null
 
